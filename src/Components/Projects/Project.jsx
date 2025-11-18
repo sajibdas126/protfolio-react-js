@@ -1,30 +1,40 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import p1 from "../../assets/project-1.png";
+import p2 from "../../assets/project-2.png";
+import p3 from "../../assets/project-3.png";
 
 const Project = () => {
   return (
     <div
       id="Projects"
-      className="p-10 md:p-24 text-white bg-gray-800 justify-center items-center "
+      className="p-10 md:p-24 bg-gray-900 text-white justify-center items-center"
     >
-      <h1 className="text-2xl text-center  md:text-4xl text-white font-bold">
-        Projects
-      </h1>
-      <div className="py-12 px-8 flex flex-wrap gap-5">
+      <h1 className="text-2xl text-center md:text-4xl font-bold">Projects</h1>
+
+      <div className="py-12 flex flex-wrap justify-center gap-8">
+
         <ProjectCard
-          title="Blogging Website"
-          main="this is a blogging website created in and some component library  created in and some component library"
+          title="Bd Electronics"
+          images={[p1]}
+          demoLink="https://6917794d114926f86c691eae--serene-jalebi-00a5de.netlify.app/"
+          codeLink="https://github.com/sajibdas126/bd-electronics.git"
         />
 
         <ProjectCard
-          title="Youtube Clon"
-          main="this is a blogging website created in and some component library  created in and some component library"
+          title="Movie Loading Website"
+          images={[p2]}
+          demoLink="https://github.com/sajibdas126/dramatic.git"
+          codeLink="https://github.com/sajibdas126/dramatic.git"
         />
 
         <ProjectCard
-          title="Facbook Colon"
-          main="this is a blogging website created in and some component library  created in and some component library"
+          title="A Ecommerce Website"
+          images={[p3]}
+          demoLink="https://github.com/sajibdas126/e-commercs.git"
+          codeLink="https://github.com/sajibdas126/e-commercs.git"
         />
+        
       </div>
     </div>
   );

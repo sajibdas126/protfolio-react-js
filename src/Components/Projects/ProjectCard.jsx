@@ -1,26 +1,50 @@
 import React from "react";
-import bannerImg from "../../assets/photo-C8q0KQHG.webp";
-const ProjectCard = ({ title, main }) => {
+
+const ProjectCard = ({ title, images = [], demoLink, codeLink }) => {
   return (
-    <div className="p-3 md:px-6  flex flex-col w-80 bg-[#0c0e19] shadow-lg  shadow-slate-900 rounded-2xl">
-      <img className="px-4" src={bannerImg} alt="" />
-      <h3 className="px-4 text-xl md:text-2xl font-bold leading-normal ">
-        {title}
-      </h3>
-      <p className="px-4 text-sm md:text-md leading-tight py-2">{main}</p>
-      <div className="mt-2 p-2 md:p-4 grid md:grid-cols-2  gap- md:gap-4">
-        <button
-          className="mt-5 md:md-10 text-white  py-2 px-3 text-sm md:text-sm md:py-2 md:px-4 hover:opacity-85
-        duration-300 hov scale-105 font-semibold rounded-3xl bg-[#465697]"
-        >
-          Contact Me
-        </button>
-        <button
-          className="mt-5 md:md-10 text-white  py-2 px-3 text-sm md:text-sm md:py-2 md:px-4 hover:opacity-85
-        duration-300 hov scale-105 font-semibold rounded-3xl bg-[#465697]"
-        >
-          Contact Me
-        </button>
+    <div className="group w-80 bg-[#0d0f1a] rounded-2xl shadow-lg shadow-black/50 overflow-hidden border border-white/10 hover:border-indigo-500/50 transition-all duration-300 backdrop-blur-xl">
+
+      {/* Image */}
+      <div className="w-full h-80 overflow-hidden bg-cover">
+        {images.map((img, idx) => (
+          <img
+            key={idx}
+            src={img}
+            alt=""
+            className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+          />
+        ))}
+      </div>
+
+      {/* Content */}
+      <div className="p-5 text-center space-y-3">
+        <h3 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-all duration-300">
+          {title}
+        </h3>
+
+        {/* Buttons */}
+        <div className=" flex flex-col md:flex-row justify-center gap-4 pt-2">
+          
+          {/* Live Demo */}
+          <a
+            href={demoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-indigo-600/80 text-white rounded-xl shadow-md hover:bg-indigo-500 transition-all duration-300"
+          >
+            Live Demo
+          </a>
+
+          {/* View Code */}
+          <a
+            href={codeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-gray-700 text-white rounded-xl shadow-md hover:bg-gray-600 transition-all duration-300"
+          >
+            View Code
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ const Navbar = () => {
   const [menu, openMenu] = useState(false);
   return (
     <nav className="flex justify-between items-center px-10 py-5 md:px-20 bg-gray-800 text-white">
-      <span className="text-xl font-bold tracking-wide">Portfolio</span>
+      <span className="text-2xl font-bold tracking-wide">Sajib<span className="text-red-500">Dash</span> </span>
 
       <ul
         className={` ${
