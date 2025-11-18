@@ -28,7 +28,7 @@ const Home = () => {
         </p>
 
         <button
-          onClick={() => window.open("/CV.pdf", "_blank")}
+          onClick={() => window.open("/SajibDash-Resume.pdf", "_blank")}
           className="mt-3 py-3 px-6 text-white bg-gradient-to-r 
              from-green-500 to-teal-500 rounded-full font-semibold 
              shadow-xl hover:scale-105 hover:shadow-green-400/50 
