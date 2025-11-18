@@ -24,14 +24,14 @@ const Project = () => {
         <ProjectCard
           title="Movie Loading Website"
           images={[p2]}
-          demoLink="https://github.com/sajibdas126/dramatic.git"
+          demoLink="https://dramatic-1.vercel.app/"
           codeLink="https://github.com/sajibdas126/dramatic.git"
         />
 
         <ProjectCard
           title="A Ecommerce Website"
           images={[p3]}
-          demoLink="https://github.com/sajibdas126/e-commercs.git"
+          demoLink="https://e-commercsbd.vercel.app/"
           codeLink="https://github.com/sajibdas126/e-commercs.git"
         />
         
